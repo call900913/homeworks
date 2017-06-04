@@ -1,5 +1,6 @@
+#LIFO
+
 class Stack
-  attr_reader :stack
 
     def initialize
       @stack = []
@@ -9,6 +10,7 @@ class Stack
     def add(el)
       # adds an element to the stack
       @stack << el
+      @stack.dup
     end
 
     def remove
@@ -18,10 +20,11 @@ class Stack
 
     def show
       # return a copy of the stack
-      @stack
+      @stack.dup
     end
 
 end
+
 
 #FIFO
 class Queue
