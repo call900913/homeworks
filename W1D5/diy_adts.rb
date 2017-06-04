@@ -35,6 +35,7 @@ class Queue
 
   def enqueue(el)
     enqueue << el
+    @queue.dup
   end
 
   def dequeue
@@ -42,7 +43,7 @@ class Queue
   end
 
   def show
-    @queue
+    @queue.dup
   end
 
 end
